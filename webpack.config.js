@@ -41,6 +41,11 @@ module.exports = (env, options) => {
           }
         ]
       })
-    ]
+    ],
+    // devServer: {
+    //   port: 8080,
+    //   open: true,
+    //   historyApiFallback: true,
+    // },
   }
 }

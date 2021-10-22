@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = (env, options) => {
   return {
@@ -6,13 +7,20 @@ module.exports = (env, options) => {
     output: {
       // 기본값 설정돼있어서 생략 가능
       // path: '',
-      filename: 'core.js',
+      // filename: '',
       publicPath: '/',
       clean: true
     },
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html'
+      }),
+      new CopyWebpackPlugin({
+        patterns: [
+          {
+            from: 'static'
+          }
+        ]
       })
     ]
   }

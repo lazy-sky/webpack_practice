@@ -11,6 +11,15 @@ module.exports = (env, options) => {
       publicPath: '/',
       clean: true
     },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: 'babel-loader'
+        }
+      ]
+    },
     plugins: [
       new HtmlWebpackPlugin({
         template: './src/index.html'

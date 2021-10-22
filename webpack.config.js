@@ -4,7 +4,10 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = (env, options) => {
   return {
     resolve: {
-      extensions: ['.js']
+      extensions: ['.js'],
+      alias:{
+        '~': path.resolve(__dirname, 'src')
+      },
     },
     entry: './src/main.js',
     output: {

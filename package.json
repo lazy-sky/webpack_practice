@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "babel": "babel src/main.js --out-dir dist"
   },
   "repository": {
     "type": "git",

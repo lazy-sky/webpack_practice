@@ -6,8 +6,9 @@ module.exports = (env, options) => {
     output: {
       // 기본값 설정돼있어서 생략 가능
       // path: '',
-      filename: 'app.js',
-      publicPath: '/'
+      filename: 'core.js',
+      publicPath: '/',
+      clean: true
     },
     plugins: [
       new HtmlWebpackPlugin({

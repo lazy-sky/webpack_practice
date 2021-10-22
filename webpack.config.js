@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = (env, options) => {
   return {
     entry: './src/main.js',
@@ -5,6 +7,11 @@ module.exports = (env, options) => {
       // 기본값 설정돼있어서 생략 가능
       // path: '',
       // filename: ''
-    }
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: './src/index.html'
+      })
+    ]
   }
 }

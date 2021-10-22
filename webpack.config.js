@@ -17,6 +17,16 @@ module.exports = (env, options) => {
           test: /\.js$/,
           exclude: /node_modules/,
           use: 'babel-loader'
+        },
+        {
+          test: /\.s?css$/,
+          use: [
+            // 처리 순서 역순으로 작성
+            'style-loader',
+            'css-loader',
+            'postcss-loader',
+            'sass-loader'
+          ]
         }
       ]
     },

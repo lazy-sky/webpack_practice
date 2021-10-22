@@ -1,2 +1,5 @@
 var a = 1;
-console.log(a);
+
+var abc = function () {
+  console.log(a);
+};

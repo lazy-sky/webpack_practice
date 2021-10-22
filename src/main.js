@@ -1,2 +1,5 @@
 const a = 1;
-console.log(a);
+
+const abc = () => {
+  console.log(a)
+}
